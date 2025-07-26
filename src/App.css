@@ -1,0 +1,965 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/* Variables  */
+
+:root {
+	/* Colors */
+	--primary-bg: #0d0d0d;
+	--secondary-bg: #002428;
+	--scroll-bg: #111827;
+	--text-color: white;
+	--accent-color: rgb(215, 151, 151);
+	--btn-bg: black;
+	--btn-border: gray;
+	--card-hover-shadow: rgba(238, 233, 233, 0.5);
+	--review-shadow: rgba(255, 255, 255, 0.856);
+
+	/* Font Sizes */
+	--heading-font: 2rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--primary-bg);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Header Section Style */
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 6rem;
+	position: sticky;
+	top: 0;
+}
+.header h1 {
+	font-size: var(--heading-font);
+	color: var(--text-color);
+}
+.links {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.links nav {
+	display: flex;
+	gap: 2rem;
+}
+
+.links a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-weight: 800;
+}
+.links nav a:hover {
+	color: var(--accent-color);
+	transition: 0.5s ease all;
+}
+.links nav a.active {
+	border-bottom: 2px solid var(--accent-color);
+	font-weight: bold;
+	color: var(--accent-color);
+}
+.icon {
+	display: none;
+}
+.btn {
+	background: none;
+	background-color: var(--btn-bg);
+	border: 1px solid var(--btn-border);
+	padding: 10px 30px;
+	border-radius: 1rem;
+	color: var(--text-color);
+	margin-left: 1rem;
+}
+.btn:hover {
+	cursor: pointer;
+	color: var(--text-color);
+	background: none;
+	transition: 1s ease all;
+}
+
+/* Home Page Style */
+
+.home-page {
+	background-image: url(https://images.unsplash.com/photo-1562813733-b31f71025d54?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvbXB1dGVyJTIwZGFya3xlbnwwfHwwfHx8MA%3D%3D);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.main-content {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 10rem 50rem 0rem 10rem;
+}
+.heading,
+.sub-heading {
+	color: var(--text-color);
+}
+.heading {
+	font-size: var(--heading-font);
+	line-height: 3rem;
+}
+
+/* Scrolling Badge  Style */
+
+.scroll-wrapper {
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: var(--scroll-bg);
+	color: var(--accent-color);
+	padding: 1.5rem 0;
+	font-size: var(--heading-font);
+	transition: transform 0.5s ease;
+}
+.scroll-wrapper:hover {
+	cursor: pointer;
+	transform: scale(1.05) translateY(-10px);
+}
+
+.scroll-text {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* Course Section Style */
+
+.Courses {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 4rem;
+	padding: 0 3rem;
+}
+.courses-heading {
+	margin: 4rem 0;
+	display: flex;
+	justify-content: center;
+	font-size: var(--heading-font);
+	color: var(--text-color);
+}
+
+.course-cards {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 4rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.course-card {
+	width: 100%;
+	max-width: 21.8rem;
+	height: 27rem;
+	border-radius: 1.1rem;
+	background-color: var(--secondary-bg);
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.course-card:hover {
+	cursor: pointer;
+	transform: scale(1.05) translateY(-10px);
+	box-shadow: 0 12px 30px var(--card-hover-shadow);
+}
+
+.course-img {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(113, 108, 108);
+	border: none;
+	border-radius: 1rem 1rem 0rem 4rem;
+}
+.course-img img {
+	width: 25rem;
+	height: 12rem;
+	padding: 0rem;
+	border-radius: 1rem 1rem 0rem 4rem;
+}
+
+.card-discription {
+	color: var(--text-color);
+	padding: 25px;
+}
+
+.card-discription h3 {
+	font-weight: 800;
+	padding-bottom: 1rem;
+}
+
+.card-discription p {
+	font-weight: 500;
+	margin-bottom: 2rem;
+}
+
+/* About Page Style */
+
+.about-page {
+	padding: 10rem 6.5rem;
+	display: flex;
+}
+.about-img img {
+	height: 30rem;
+	border-radius: 1rem;
+	margin-right: 3rem;
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.about-img img:hover {
+	cursor: pointer;
+	transform: scale(1.05) translateY(-10px);
+	box-shadow: 0 12px 30px var(--card-hover-shadow);
+}
+
+.about-disccription {
+	color: var(--text-color);
+}
+
+.about-disccription h4 {
+	font-size: larger;
+	padding-bottom: 4rem;
+	letter-spacing: 0.3rem;
+}
+
+.about-disccription h1 {
+	font-size: var(--heading-font);
+	line-height: 2.5rem;
+	padding-bottom: 2rem;
+}
+
+.about-disccription p {
+	line-height: 2rem;
+}
+
+/*  Review Section Style */
+
+.review-heading {
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	padding: 5rem 0rem 3rem 0rem;
+	font-size: var(--heading-font);
+	font-style: italic;
+}
+
+.review-section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 2rem;
+	grid-row-gap: 2rem;
+	margin: 0 6.5rem 5rem 6.5rem;
+	background-color: var(--secondary-bg);
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.studnet-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: first baseline;
+	line-height: 1rem;
+}
+.review-card {
+	display: flex;
+	align-items: center;
+	background-image: url(https://futureittechnology.com/assets/images/testimonial/cloud-pattern.png);
+	background-color: rgb(201, 200, 200);
+	width: auto;
+	height: 11rem;
+	border-radius: 1rem;
+	padding: 1.5rem;
+	overflow: hidden;
+	flex: 0 0 50%;
+	box-sizing: border-box;
+	transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.review-card:hover {
+	cursor: pointer;
+	transform: scale(1.05) translateY(-10px);
+	box-shadow: 0 12px 20px var(--review-shadow);
+}
+
+.review-card img {
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
+	margin-bottom: 0.5rem;
+}
+
+.review-card h2 {
+	font-size: 1.2rem;
+	padding-top: 0.5rem;
+	font-weight: 900;
+	padding-bottom: 1rem;
+}
+
+.review-card h6 {
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+.student-review p {
+	padding: 0 0 0 2rem;
+	line-height: 2rem;
+	font-weight: bolder;
+}
+
+/* Footer Section Style */
+
+.footer {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	margin: 2rem 4rem 0.5rem 4rem;
+	color: var(--text-color);
+}
+.fit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.5s ease;
+}
+.fit:hover,
+.adress:hover,
+.courses:hover,
+.blog:hover {
+	transform: scale(1.05) translateY(-10px);
+}
+.fit h1,
+.adress h1,
+.courses h1,
+.blog h1 {
+	font-size: var(--heading-font);
+	font-weight: 900;
+	padding: 2rem 0;
+}
+.fit p,
+.courses p,
+.blog p,
+.adress a,
+.adress p {
+	line-height: 2rem;
+	padding-bottom: 2rem;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.fit p {
+	width: 18rem;
+}
+
+.adress,
+.courses,
+.blog {
+	display: flex;
+	flex-direction: column;
+	align-items: first baseline;
+	transition: transform 0.5s ease;
+}
+
+.adress a {
+	line-height: 1.5rem;
+	text-decoration: none;
+	color: var(--text-color);
+	padding-bottom: 1.5rem;
+	width: 15rem;
+}
+.adress a:hover {
+	color: var(--accent-color);
+	transition: 1s ease all;
+}
+.adress p {
+	padding: 0.5rem 0;
+}
+
+.last-line {
+	color: var(--text-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 0;
+	color: var(--accent-color);
+}
+
+/* Media Quaries For All Devices */
+
+/* Media Quaries For Mobile  */
+
+@media (max-width: 599px) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+		position: static;
+	}
+	.header h1 {
+		font-size: var(--heading-font);
+	}
+	.links {
+		display: none;
+	}
+	.icon {
+		display: block;
+		color: var(--text-color);
+		font-size: var(--heading-font);
+	}
+
+	.main-content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0;
+		padding-top: 10rem;
+	}
+
+	.heading {
+		font-size: var(--heading-font);
+		line-height: 3rem;
+		color: var(--text-color);
+		width: 28rem;
+	}
+	.sub-heading {
+		color: var(--text-color);
+		width: 27rem;
+		line-height: 2rem;
+		font-weight: 800;
+	}
+
+	.scroll-wrapper {
+		font-size: 1.5rem;
+		font-weight: 900;
+	}
+
+	.Courses {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.course-card {
+		width: 18rem;
+	}
+	.course-img img {
+		width: 18rem;
+	}
+
+	.about-page {
+		padding: 10rem 4.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-img img {
+		height: 15rem;
+		margin-bottom: 2rem;
+	}
+
+	.about-disccription h1 {
+		width: 25rem;
+	}
+
+	.about-disccription p {
+		width: 23rem;
+	}
+
+	.review-section {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0 2rem 3rem 2rem;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.review-card {
+		width: auto;
+		padding: 1.5rem 1.5rem;
+	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0;
+	}
+	.fit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.5s ease;
+	}
+
+	.fit h1,
+	.adress h1,
+	.courses h1,
+	.blog h1 {
+		font-size: var(--heading-font);
+	}
+	.fit p,
+	.courses p,
+	.blog p,
+	.adress a,
+	.adress p {
+		font-size: 0.8rem;
+	}
+
+	.adress,
+	.courses,
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.courses p {
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
+		width: auto;
+		padding: 0rem 4rem 2rem 4rem;
+	}
+
+	.blog p,
+	.fit p,
+	.adress a {
+		width: auto;
+		padding: 0rem 6rem 2rem 6rem;
+	}
+}
+
+/* Media Quaries For Small Tablet  */
+
+@media (min-width: 600px) and (max-width: 899px) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+		position: static;
+	}
+	.header h1 {
+		font-size: var(--heading-font);
+	}
+	.links {
+		display: none;
+	}
+	.icon {
+		display: block;
+		color: var(--text-color);
+		font-size: var(--heading-font);
+	}
+
+	.main-content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0;
+		padding-top: 10rem;
+	}
+
+	.heading {
+		font-size: var(--heading-font);
+		line-height: 3rem;
+		color: var(--text-color);
+		width: 28rem;
+	}
+	.sub-heading {
+		color: var(--text-color);
+		width: 27rem;
+		line-height: 2rem;
+		font-weight: 800;
+	}
+
+	.scroll-wrapper {
+		font-size: 1.5rem;
+		font-weight: 900;
+	}
+
+	.Courses {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.5rem;
+		row-gap: 3rem;
+		padding: 0 1rem;
+	}
+	.course-card {
+		width: 18rem;
+	}
+	.course-img img {
+		width: 18rem;
+	}
+
+	.about-page {
+		padding: 10rem 4.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-img img {
+		max-height: 20rem;
+		margin: 0;
+
+		margin-bottom: 2rem;
+	}
+
+	.about-disccription h1 {
+		width: 25rem;
+	}
+
+	.about-disccription p {
+		width: 23rem;
+	}
+
+	.review-section {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0 2rem 3rem 2rem;
+		padding: 2rem;
+	}
+
+	.review-card {
+		width: auto;
+		padding: 1.5rem 1.5rem;
+	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0;
+	}
+	.fit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.5s ease;
+	}
+
+	.fit h1,
+	.adress h1,
+	.courses h1,
+	.blog h1 {
+		font-size: var(--heading-font);
+	}
+	.fit p,
+	.courses p,
+	.blog p,
+	.adress a,
+	.adress p {
+		font-size: 0.8rem;
+	}
+
+	.adress,
+	.courses,
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.courses p {
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
+		width: auto;
+		padding: 0rem 4rem 2rem 4rem;
+	}
+
+	.blog p,
+	.fit p,
+	.adress a {
+		width: auto;
+		padding: 0rem 6rem 2rem 6rem;
+	}
+}
+
+/* Media Quaries For Large Tablet   */
+
+@media (min-width: 900px) and (max-width: 999px) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 4rem;
+		position: static;
+	}
+	.header h1 {
+		font-size: var(--heading-font);
+	}
+
+	.main-content {
+		gap: 1rem;
+
+		padding-top: 10rem;
+	}
+
+	.heading {
+		font-size: var(--heading-font);
+		line-height: 3rem;
+		color: var(--text-color);
+		width: 28rem;
+	}
+	.sub-heading {
+		color: var(--text-color);
+		width: 27rem;
+		line-height: 2rem;
+		font-weight: 800;
+	}
+
+	.Courses {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: auto;
+		row-gap: auto;
+		padding: 0 1rem;
+	}
+
+	.about-page {
+		padding: 10rem 4.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-img img {
+		height: 24rem;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	.about-disccription h1 {
+		width: 29rem;
+	}
+
+	.about-disccription p {
+		width: 31rem;
+	}
+
+	.review-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0 2rem 3rem 2rem;
+		padding: 2rem;
+	}
+
+	.review-card {
+		padding: 1.5rem 1.5rem;
+		width: auto;
+	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0;
+		padding: 0%;
+		gap: 0;
+	}
+	.fit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.5s ease;
+	}
+
+	.fit h1,
+	.adress h1,
+	.courses h1,
+	.blog h1 {
+		font-size: var(--heading-font);
+	}
+	.fit p,
+	.courses p,
+	.blog p,
+	.adress a,
+	.adress p {
+		font-size: 0.8rem;
+	}
+
+	.adress,
+	.courses,
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.courses p {
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
+		width: auto;
+		padding: 0rem 4rem 2rem 4rem;
+	}
+
+	.blog p,
+	.fit p,
+	.adress a {
+		width: auto;
+		padding: 0rem 6rem 2rem 6rem;
+	}
+}
+
+/* Media Quaries For Small Laptop */
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 4rem;
+		position: static;
+	}
+	.header h1 {
+		font-size: var(--heading-font);
+	}
+
+	.main-content {
+		gap: 1rem;
+
+		padding-top: 10rem;
+	}
+
+	.heading {
+		font-size: var(--heading-font);
+		line-height: 3rem;
+		color: var(--text-color);
+		width: 28rem;
+	}
+	.sub-heading {
+		color: var(--text-color);
+		width: 27rem;
+		line-height: 2rem;
+		font-weight: 800;
+	}
+
+	.Courses {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: auto;
+		row-gap: auto;
+		padding: 0 1rem;
+	}
+
+	.about-page {
+		padding: 10rem 4.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.about-img img {
+		height: 24rem;
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+
+	.about-disccription h1 {
+		width: 29rem;
+	}
+
+	.about-disccription p {
+		width: auto;
+	}
+
+	.review-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0 2rem 3rem 2rem;
+		padding: 2rem;
+	}
+
+	.review-card {
+		padding: 1.5rem 1.5rem;
+		width: auto;
+	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0;
+		padding: 0%;
+		gap: 0;
+	}
+	.fit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform 0.5s ease;
+	}
+
+	.fit h1,
+	.adress h1,
+	.courses h1,
+	.blog h1 {
+		font-size: var(--heading-font);
+	}
+	.fit p,
+	.courses p,
+	.blog p,
+	.adress a,
+	.adress p {
+		font-size: 0.8rem;
+	}
+
+	.adress,
+	.courses,
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.courses p {
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
+		width: auto;
+		padding: 0rem 4rem 2rem 4rem;
+	}
+
+	.blog p,
+	.fit p,
+	.adress a {
+		width: auto;
+		padding: 0rem 6rem 2rem 6rem;
+	}
+}
+
+/* And Also Work ON Large Laptops  */
+
+/* -------------------------------------------------------------
+   End of App.css
+   Created by: Meer Ahmed Baloch – 2025 | FIT Computer Institute
+
+   💡 Advice:
+   Always write clean, readable, and reusable CSS.
+   Use meaningful class names and keep your styles modular.
+   Don’t style just to make it work — style to make it last.
+
+   Happy Coding! 🚀
+-------------------------------------------------------------- */
