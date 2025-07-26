@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+#  FIT Computer Institute – React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive, and educational website built for FIT Computer Institute. This React app showcases 24+ professional courses, real student reviews, and institute contact details — all with clean UI and performance-focused design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
 
-### `npm start`
+##  Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+fit-institute-react/
+│
+├── public/
+│ └── index.html
+│
+├── src/
+│ ├── App.js
+│ ├── App.css
+│ └── index.js
+│
+├── README.md
+└── package.json
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+##  Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React JS**
+- **CSS3** (Custom styling)
+- **React Icons**
+- **HTML5** (JSX in React)
+- **Unsplash API** (for professional course images)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Features
 
-### `npm run eject`
+- ✅ 24+ course cards with images, price, and descriptions  
+- ✅ Responsive layout with modern design  
+- ✅ Navigation links with active styling  
+- ✅ Scroll badge displaying all courses  
+- ✅ Real student review section  
+- ✅ Footer with full address, contact, and blog  
+- ✅ React Icons integration  
+- ✅ Cleanly structured and commented code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##  Developer Advice (written in App.css)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+/*  
+💡 Advice:  
+Always write clean, readable, and reusable CSS.  
+Use meaningful class names and keep your styles modular.  
+Don’t style just to make it work — style to make it last.  
+*/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+##  Developed By
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Meer Ahmed Baloch**  
+Frontend Developer | Student at FIT Computer Institute  
+📧 Email: ab1338484@gmail.com  
+📞 Phone: 0301-0902945
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+##  Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [ ] Add hamburger menu functionality (toggle navigation)
+- [ ] Add animations with Framer Motion or CSS transitions
+- [ ] Implement course filtering or search
+- [ ] Deploy on Netlify or Vercel
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##  License
 
-### Making a Progressive Web App
+This project is open-source and free to use for educational purposes.  
+© 2025 Created With Love By  Meer Ahmed Baloch. All rights reserved.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+##  Final Words
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> “Learn. Build. Succeed.” – FIT Computer Institute  
+> Frontend is your entry point. Full Stack is your destination. Keep pushing forward! 💪
